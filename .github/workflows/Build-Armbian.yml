@@ -140,7 +140,7 @@ jobs:
           allowUpdates: true
           removeArtifacts: false
           replacesArtifacts: true
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ github.token }}  # 使用自动生成的 token
           body: |
             ### Armbian Image Information
             - Release: ${{ inputs.RELEASE }}
@@ -155,4 +155,4 @@ jobs:
           releases_keep_latest: 10
           delete_workflows: true
           workflows_keep_day: 3
-          gh_token: ${{ secrets.GH_TOKEN }}
+          gh_token: ${{ github.token }}  # 使用自动生成的 token
