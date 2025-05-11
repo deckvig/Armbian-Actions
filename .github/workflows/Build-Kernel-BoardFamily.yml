@@ -111,7 +111,7 @@ jobs:
           allowUpdates: true
           removeArtifacts: false
           replacesArtifacts: true
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ github.token }}
           body: |
             ### Armbian Kernel Packages for ${{ env.BOARDFAMILY }}
             - Usage method: After unzipping, install the deb packages in order
@@ -126,7 +126,7 @@ jobs:
           releases_keep_latest: 10
           delete_workflows: true
           workflows_keep_day: 3
-          gh_token: ${{ secrets.GH_TOKEN }}
+          gh_token: ${{ github.token }}
 
       - name: Calculate Workflow Duration
         id: duration
